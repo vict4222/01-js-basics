@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>“half your age plus seven”</h1>
+      <p>Din alder</p>
+      <input type="text" id="your_age" />
+      <p>Din partners alder</p>
+      <input type="text" id="partners_age" />
+      <br />
+      <button id="send">Send</button>
+      <script>
+        document
+          .getElementById("send")
+          .addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+          let yourAge = document.getElementById("your_age").value;
+          let partnersAge = document.getElementById("partners_age").value;
+          let yourAgeHalfPlusSeven = yourAge / 2 + 7;
+          let partnersAgeHalfPlusSeven = partnersAge / 2 + 7;
+          let suggestPartnersAge = 2 * yourAge - 14;
+
+          if (partnersAge < yourAgeHalfPlusSeven && partnersAge >= 15) {
+            console.log(
+              `Den går ikke du... Din partner er for ung, han/hun bør være mindst ${yourAgeHalfPlusSeven} år gammel`
+            );
+          } else if (yourAge < partnersAgeHalfPlusSeven && yourAge >= 15) {
+            console.log(
+              `Du er for ung til din partner! Hvad med at finde en som er højst ${suggestPartnersAge} år gammel?`
+            );
+          } else if (yourAge < 15 || partnersAge < 15) {
+            console.log("I skal altså begge være over 15 år!");
+          } else console.log('"half your age plus seven"-reglen er overholdt!');
+        }
+      </script>
+    </main>
+  </body>
+</html>
