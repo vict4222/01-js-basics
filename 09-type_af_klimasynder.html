@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        let myHours = 3;
+        let co2UdledtIKgVedFlyrejse = myHours * 109;
+
+        let myResult = `Du har fløjet ${myHours} timer og udledt ${co2UdledtIKgVedFlyrejse} kg CO2.`;
+
+        if (co2UdledtIKgVedFlyrejse < 100) {
+          console.log(`${myResult} Tæt på Thunberg`);
+        } else if (
+          co2UdledtIKgVedFlyrejse >= 100 &&
+          co2UdledtIKgVedFlyrejse < 200
+        ) {
+          console.log(
+            `${myResult} Ja ja, du behøver ikke at melde dig ud af Å!`
+          );
+        } else if (
+          co2UdledtIKgVedFlyrejse >= 200 &&
+          co2UdledtIKgVedFlyrejse < 600
+        ) {
+          console.log(`${myResult} Det er godt for turismen i nordeuropa.`);
+        } else
+          console.log(
+            `${myResult} Nå ja vi kan jo altid kolonisere en anden planet ...`
+          );
+      </script>
+    </main>
+  </body>
+</html>
