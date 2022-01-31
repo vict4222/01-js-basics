@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Angiv længden af din flyrejse i timer</h1>
+      <input type="text" id="hours" />
+      <button id="send">Send</button>
+      <script>
+        document
+          .getElementById("send")
+          .addEventListener("click", calculateArea);
+
+        function calculateArea() {
+          let myHours = document.getElementById("hours").value;
+          let co2UdledtIKgVedFlyrejse = myHours * 109;
+          let myResult;
+
+          if (isNaN(co2UdledtIKgVedFlyrejse)) {
+            myResult = "Det er ikke et tal, prøv igen!";
+          } else if (co2UdledtIKgVedFlyrejse <= 0) {
+            myResult = "Du kan ikke flyve tilbage i tiden! Prøv igen!";
+          } else
+            myResult = `Du har udledt ${co2UdledtIKgVedFlyrejse} kg CO2 på din flyrejse`;
+
+          console.log(myResult);
+        }
+      </script>
+    </main>
+  </body>
+</html>
