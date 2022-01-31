@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        let myLength = 25;
+        let myWidth = 5;
+        let myArea = myLength * myWidth;
+        let myResult = `Længden er ${myLength} meter og bredden er ${myWidth} meter. Arealet er ${myArea}`;
+
+        console.log(myResult);
+
+        if (myArea < 100) {
+          console.log("Arealet er for lille");
+        } else if (myArea >= 200) {
+          console.log("Arealet er for stort");
+        } else console.log("Arealet er ok");
+      </script>
+    </main>
+  </body>
+</html>
