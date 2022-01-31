@@ -11,11 +11,11 @@
       <script>
         let currentTime = new Date().getHours();
 
-        if (currentTime > 5 && currentTime < 10) {
+        if (currentTime >= 5 && currentTime < 10) {
           console.log(`Godmorgen, klokken er ${currentTime}`);
-        } else if (currentTime > 10 && currentTime < 18) {
+        } else if (currentTime >= 10 && currentTime < 18) {
           console.log(`Goddag, klokken er ${currentTime}`);
-        } else if (currentTime > 18 && currentTime < 24) {
+        } else if (currentTime >= 18 && currentTime < 24) {
           console.log(`Godaften, klokken er ${currentTime}`);
         } else {
           console.log(`Godnat, klokken er ${currentTime}`);
