@@ -13,19 +13,18 @@
       <input type="text" id="width" />
       <button id="send">Send</button>
       <script>
-        let myLength = document.getElementById("length").value;
-        let myWidth = document.getElementById("width").value;
-        //let myArea = myLength * myWidth;
-        let myResult = `Længde: ${myLength} meter, bredde: ${myWidth} meter, areal: ${myArea(
-          myLength,
-          myWidth
-        )} meter`;
-
         document
           .getElementById("send")
           .addEventListener("click", calculateArea);
 
         function calculateArea() {
+          let myLength = document.getElementById("length").value;
+          let myWidth = document.getElementById("width").value;
+          //let myArea = myLength * myWidth;
+          let myResult = `Længde: ${myLength} meter, bredde: ${myWidth} meter, areal: ${myArea(
+            myLength,
+            myWidth
+          )} meter`;
           console.log(myResult);
         }
 

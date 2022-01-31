@@ -12,12 +12,11 @@
       <input type="text" id="name" />
       <button id="send">Send</button>
       <script>
-        let yourName = document.getElementById("name").value;
-        let myGreetings = `Goddag ${yourName}`;
-
         document.getElementById("send").addEventListener("click", helloName);
 
         function helloName() {
+          let yourName = document.getElementById("name").value;
+          let myGreetings = `Goddag ${yourName}`;
           console.log(myGreetings);
         }
       </script>

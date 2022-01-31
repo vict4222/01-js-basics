@@ -13,30 +13,28 @@
       <input type="text" id="width" />
       <button id="send">Send</button>
       <script>
-        let myLength = document.getElementById("length").value;
-        let myWidth = document.getElementById("width").value;
-        let a = myLength * myWidth;
-        let myResult;
-
-        if (isNaN(a)) {
-          myResult = "Det er ikke et tal, prøv igen!";
-        } else if (a <= 0) {
-          myResult = "Arealet er mindre end nul! Prøv igen!";
-        } else myResult = `Arealet er ${a} meter`;
-
         document
           .getElementById("send")
           .addEventListener("click", calculateArea);
 
         function calculateArea() {
+          let myLength = document.getElementById("length").value;
+          let myWidth = document.getElementById("width").value;
+          let a = myLength * myWidth;
+          let myResult;
+
+          if (isNaN(a)) {
+            myResult = "Det er ikke et tal, prøv igen!";
+          } else if (a <= 0) {
+            myResult = "Arealet er mindre end nul! Prøv igen!";
+          } else myResult = `Arealet er ${a} meter`;
+
           console.log(myResult);
         }
 
         function myArea(l, b) {
           return l * b;
         }
-
-        myArea();
       </script>
     </main>
   </body>
