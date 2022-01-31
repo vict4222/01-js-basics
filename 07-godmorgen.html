@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        let currentTime = new Date().getHours();
+
+        if (currentTime > 5 && currentTime < 10) {
+          console.log(`Godmorgen, klokken er ${currentTime}`);
+        } else if (currentTime > 10 && currentTime < 18) {
+          console.log(`Goddag, klokken er ${currentTime}`);
+        } else if (currentTime > 18 && currentTime < 24) {
+          console.log(`Godaften, klokken er ${currentTime}`);
+        } else {
+          console.log(`Godnat, klokken er ${currentTime}`);
+        }
+      </script>
+    </main>
+  </body>
+</html>
