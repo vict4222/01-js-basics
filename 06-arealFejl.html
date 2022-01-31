@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Angiv en længde og en bredde i henholdsvis første og sidste felt</h1>
+      <input type="text" id="length" />
+      <input type="text" id="width" />
+      <button id="send">Send</button>
+      <script>
+        let myLength = document.getElementById("length").value;
+        let myWidth = document.getElementById("width").value;
+        let a = myLength * myWidth;
+        let myResult;
+
+        if (isNaN(a)) {
+          myResult = "Det er ikke et tal, prøv igen!";
+        } else if (a <= 0) {
+          myResult = "Arealet er mindre end nul! Prøv igen!";
+        } else myResult = `Arealet er ${a} meter`;
+
+        document
+          .getElementById("send")
+          .addEventListener("click", calculateArea);
+
+        function calculateArea() {
+          console.log(myResult);
+        }
+
+        function myArea(l, b) {
+          return l * b;
+        }
+
+        myArea();
+      </script>
+    </main>
+  </body>
+</html>
