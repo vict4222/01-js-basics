@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Beregn din hunds ålder i hundealder</h1>
+      <p>Angiv din hunds menneskealder</p>
+      <input type="text" id="dog_age" />
+      <button id="send">Send</button>
+      <script>
+        document
+          .getElementById("send")
+          .addEventListener("click", calculateDogAge);
+
+        function calculateDogAge() {
+          let dogAge = document.getElementById("dog_age").value;
+          let oldDogAgeResult = dogAge * 7;
+          let newDogAgeResult = Math.round(16 * Math.log(dogAge) + 31);
+
+          console.log(
+            `Din hunds alder med den gamle metode er ${oldDogAgeResult} år gammel i hundealder. Med den nye metode er hunden ${newDogAgeResult} år gammel i hundealder.`
+          );
+        }
+      </script>
+    </main>
+  </body>
+</html>
